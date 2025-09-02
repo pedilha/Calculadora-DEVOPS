@@ -1,5 +1,4 @@
 package br.com.aula;
-
 import java.util.Scanner;
 
 public class Calculadora {
@@ -12,6 +11,15 @@ public class Calculadora {
     // Método de subtração
     public static double subtrair(double a, double b) {
         return a - b;
+    }
+
+    // Método de divisão
+    public static double dividir(double a, double b) {
+        if (b == 0) {
+            System.out.println("⚠️ Erro: divisão por zero não é permitida!");
+            return Double.NaN; // Retorna "Not a Number"
+        }
+        return a / b;
     }
 
     public static void main(String[] args) {
@@ -48,8 +56,18 @@ public class Calculadora {
                     break;
 
                 case 3:
-                case 4:
                     System.out.println("⚠️ Essa operação ainda não foi implementada!");
+                    break;
+
+                case 4:
+                    System.out.print("Digite o primeiro número: ");
+                    double d1 = scanner.nextDouble();
+                    System.out.print("Digite o segundo número: ");
+                    double d2 = scanner.nextDouble();
+                    double resultadoDiv = dividir(d1, d2);
+                    if (!Double.isNaN(resultadoDiv)) {
+                        System.out.println("Resultado da divisão: " + resultadoDiv);
+                    }
                     break;
 
                 case 0:
