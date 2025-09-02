@@ -9,6 +9,11 @@ public class Calculadora {
         return a + b;
     }
 
+    // Método de subtração
+    public static double subtrair(double a, double b) {
+        return a - b;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcao;
@@ -29,11 +34,19 @@ public class Calculadora {
                     double num1 = scanner.nextDouble();
                     System.out.print("Digite o segundo número: ");
                     double num2 = scanner.nextDouble();
-                    double resultado = somar(num1, num2);
-                    System.out.println("Resultado da soma: " + resultado);
+                    double resultadoSoma = somar(num1, num2);
+                    System.out.println("Resultado da soma: " + resultadoSoma);
                     break;
 
                 case 2:
+                    System.out.print("Digite o primeiro número: ");
+                    double n1 = scanner.nextDouble();
+                    System.out.print("Digite o segundo número: ");
+                    double n2 = scanner.nextDouble();
+                    double resultadoSub = subtrair(n1, n2);
+                    System.out.println("Resultado da subtração: " + resultadoSub);
+                    break;
+
                 case 3:
                 case 4:
                     System.out.println("⚠️ Essa operação ainda não foi implementada!");
