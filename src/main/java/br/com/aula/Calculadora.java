@@ -1,4 +1,5 @@
 package br.com.aula;
+
 import java.util.Scanner;
 
 public class Calculadora {
@@ -11,6 +12,11 @@ public class Calculadora {
     // Método de subtração
     public static double subtrair(double a, double b) {
         return a - b;
+    }
+
+    // Método de multiplicação
+    public static double multiplicar(double a, double b) {
+        return a * b;
     }
 
     // Método de divisão
@@ -42,8 +48,7 @@ public class Calculadora {
                     double num1 = scanner.nextDouble();
                     System.out.print("Digite o segundo número: ");
                     double num2 = scanner.nextDouble();
-                    double resultadoSoma = somar(num1, num2);
-                    System.out.println("Resultado da soma: " + resultadoSoma);
+                    System.out.println("Resultado da soma: " + somar(num1, num2));
                     break;
 
                 case 2:
@@ -51,12 +56,15 @@ public class Calculadora {
                     double n1 = scanner.nextDouble();
                     System.out.print("Digite o segundo número: ");
                     double n2 = scanner.nextDouble();
-                    double resultadoSub = subtrair(n1, n2);
-                    System.out.println("Resultado da subtração: " + resultadoSub);
+                    System.out.println("Resultado da subtração: " + subtrair(n1, n2));
                     break;
 
                 case 3:
-                    System.out.println("⚠️ Essa operação ainda não foi implementada!");
+                    System.out.print("Digite o primeiro número: ");
+                    double m1 = scanner.nextDouble();
+                    System.out.print("Digite o segundo número: ");
+                    double m2 = scanner.nextDouble();
+                    System.out.println("Resultado da multiplicação: " + multiplicar(m1, m2));
                     break;
 
                 case 4:
